@@ -10,6 +10,10 @@
 #   from a third party and without using any aids other than those cited.
 
 
+"""
+The random module helps randomise the offset value, hence unpredictable encryption.
+"""
+
 import random
 
 
