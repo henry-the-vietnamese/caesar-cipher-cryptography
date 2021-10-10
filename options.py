@@ -26,7 +26,7 @@ def option_1(message):
 def option_2(message):
     if message == '':
         print('Error: Cannot encrypt an empty message.')
-        return None
+        return ''
     else:
         OFFSET = random.randint(32, 126)
         encrypted_message = ''
@@ -44,7 +44,7 @@ def option_2(message):
 def option_3(encrypted_message):
     if encrypted_message == '':
         print('Error: Cannot decrypt an empty message.')
-        return None
+        return ''
     else:
         OFFSET = ord(encrypted_message[-1])
         decrypted_message = ''
