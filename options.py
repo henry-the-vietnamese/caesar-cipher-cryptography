@@ -18,6 +18,7 @@ def option_1(message):
     print(f'Your message is: \'{message}\'')
     return message
 
+
 def option_2(message):
     if message == '':
         print('Error: Cannot encrypt an empty message.')
@@ -35,19 +36,19 @@ def option_2(message):
         print(f'Your message is: \'{encrypted_message}\'')
         return encrypted_message
 
-def option_3(message):
-    if message == '':
+
+def option_3(encrypted_message):
+    if encrypted_message == '':
         print('Error: Cannot decrypt an empty message.')
         return None
     else:
-        OFFSET = ord(message[-1])
-        decrypted_message =''
-
+        OFFSET = ord(encrypted_message[-1])
+        decrypted_message = ''
+        for i in encrypted_message:
+            UNICODE_VALUE = ord(i) - OFFSET
+            while UNICODE_VALUE < 32:
+                UNICODE_VALUE += 95
+            decrypted_message += chr(UNICODE_VALUE)
         print('Your message was successfully decrypted.')
-        print(f'Your message is: \'{decrypted_message}\'')
-        return decrypted_message
-
-
-
-
-
+        print(f'Your message is: \'{decrypted_message[:-1]}\'')
+        return decrypted_message[:-1]
