@@ -35,17 +35,17 @@ while option not in range(1, 5):
 
 # Now we have a valid option.
 while option != 4:
+    OFFSET = 1
     if option == 1:
         message = options.option_1(message)
     elif option == 2:
-        print('Option 2: Encrypt Message')
-        options.option_2(message)
+        message = options.option_2(OFFSET, message)
     else:
         print('Option 3: Decrypt Message')
     print(menu_driven_program)
     option = int(input('Enter an option (1,2,3,4): '))
 
 # Exit the loop, meaning option == 4:
-print(f'Your message is: \'{message}.\'')
+print(f'Your message is: \'{message}\'')
 print('\nGoodbye')
 
