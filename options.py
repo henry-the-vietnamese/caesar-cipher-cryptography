@@ -37,7 +37,7 @@ def option_2(message):
             encrypted_message += chr(UNICODE_VALUE)
         encrypted_message += chr(OFFSET)
         print('Your message was successfully encrypted.')
-        print(f'Your message is: \'{encrypted_message}\'')
+        print(f'Your message is: \'{encrypted_message}\'.')
         return encrypted_message
 
 
@@ -54,5 +54,5 @@ def option_3(encrypted_message):
                 UNICODE_VALUE += 95
             decrypted_message += chr(UNICODE_VALUE)
         print('Your message was successfully decrypted.')
-        print(f'Your message is: \'{decrypted_message[:-1]}\'')
+        print(f'Your message is: \'{decrypted_message[:-1]}\'.')
         return decrypted_message[:-1]
