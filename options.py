@@ -17,12 +17,12 @@ The random module helps randomise the offset value, hence unpredictable encrypti
 import random
 
 
-def ValidateOption():
+def ValidOption():
     try:
         option = int(input('Enter an option (1,2,3,4): '))
     except ValueError:
         print('Invalid choice. It should be an integer data type.')
-        option = ValidateOption()
+        option = ValidOption()
     finally:
         while option not in range(1, 5):
             option = int(input('Invalid choice. Enter an option (1,2,3,4): '))

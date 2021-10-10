@@ -33,7 +33,7 @@ print(menu_driven_program)
 message = ''
 
 # Input Validation
-option = options.ValidateOption()
+option = options.ValidOption()
 
 # Now we have a valid option.
 while option != 4:
@@ -44,7 +44,7 @@ while option != 4:
     else:
         message = options.option_3(message)
     print(menu_driven_program)
-    option = options.ValidateOption()
+    option = options.ValidOption()
 
 # Exit the loop, meaning option == 4:
 if message != '':
