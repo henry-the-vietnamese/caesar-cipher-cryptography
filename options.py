@@ -10,16 +10,20 @@
 #   from a third party and without using any aids other than those cited.
 
 
+import random
+
+
 def option_1(message):
     message = input('Please enter a new message: ')
     print(f'Your message is: \'{message}\'')
     return message
 
-def option_2(OFFSET, message):
+def option_2(message):
     if message == '':
         print('Error: Cannot encrypt an empty message.')
         return None
     else:
+        OFFSET = random.randint(32, 126)
         encrypted_message = ''
         for i in message:
             UNICODE_VALUE = ord(i) + OFFSET
@@ -30,3 +34,20 @@ def option_2(OFFSET, message):
         print('Your message was successfully encrypted.')
         print(f'Your message is: \'{encrypted_message}\'')
         return encrypted_message
+
+def option_3(message):
+    if message == '':
+        print('Error: Cannot decrypt an empty message.')
+        return None
+    else:
+        OFFSET = ord(message[-1])
+        decrypted_message =''
+
+        print('Your message was successfully decrypted.')
+        print(f'Your message is: \'{decrypted_message}\'')
+        return decrypted_message
+
+
+
+
+

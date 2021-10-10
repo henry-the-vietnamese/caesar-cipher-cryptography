@@ -10,7 +10,6 @@
 #   from a third party and without using any aids other than those cited.
 
 
-import random
 import options
 
 
@@ -36,13 +35,12 @@ while option not in range(1, 5):
 
 # Now we have a valid option.
 while option != 4:
-    OFFSET = random.randint(32, 126)
     if option == 1:
         message = options.option_1(message)
     elif option == 2:
-        message = options.option_2(OFFSET, message)
+        message = options.option_2(message)
     else:
-        message = options.option_3(OFFSET, message)
+        message = options.option_3(message)
     print(menu_driven_program)
     option = int(input('Enter an option (1,2,3,4): '))
 
