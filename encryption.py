@@ -47,8 +47,9 @@ while option != 4:
         message = options.option_3(message)
     print(menu_driven_program)
     option = int(input('Enter an option (1,2,3,4): '))
+    while option not in range(1, 5):
+        option = int(input('Invalid choice. Enter an option (1,2,3,4): '))
 
 # Exit the loop, meaning option == 4:
-print(f'Your message is: \'{message}\'')
 print('\nGoodbye')
 
