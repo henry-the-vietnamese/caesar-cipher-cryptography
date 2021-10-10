@@ -10,8 +10,10 @@
 #   from a third party and without using any aids other than those cited.
 
 
-# Menu Driven Program:
-print(
+import options
+
+
+menu_driven_program = (
 """
 -------------------
      MAIN MENU
@@ -23,6 +25,8 @@ print(
 """
 )
 
+print(menu_driven_program)
+message = ''
 option = int(input('Enter an option (1,2,3,4): '))
 
 # Input Validation.
@@ -30,14 +34,16 @@ while option not in range(1, 5):
     option = int(input('Invalid choice. Enter an option (1,2,3,4): '))
 
 # Now we have a valid option.
-if option == 1:
-    print('Option 1: Enter Message')
-elif option == 2:
-    print('Option 2: Encrypt Message')
-elif option == 3:
-    print('Option 3: Decrypt Message')
-else:
-    print('\nGoodbye')
-
-
+while option != 4:
+    if option == 1:
+         message = options.option_1(message)
+    elif option == 2:
+        print('Option 2: Encrypt Message')
+    elif option == 3:
+        print('Option 3: Decrypt Message')
+    print(menu_driven_program)
+    option = int(input('Enter an option (1,2,3,4): '))
+    if option == 4:
+        print(f'Your message is: \'{message}.\'')
+        print('\nGoodbye')
 
