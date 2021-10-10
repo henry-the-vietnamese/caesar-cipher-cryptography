@@ -12,24 +12,13 @@
 
 """
 The predefined options module consists of three functions that take place as soon as the user inputs an option - which is also evaluated using another function.
+Another funciton in the options module is the one that displays the menu driven program, which is helpful since the menu is repeatedly used in the main program.
 """
 
 import options
 
 
-menu_driven_program = (
-"""
--------------------
-     MAIN MENU
--------------------
-1. Enter Message
-2. Encrypt Message
-3. Decrypt Message
-4. Quit
-"""
-)
-
-print(menu_driven_program)
+options.menu_driven_program()
 message = ''
 
 # Input Validation
@@ -43,11 +32,10 @@ while option != 4:
         message = options.option_2(message)
     else:
         message = options.option_3(message)
-    print(menu_driven_program)
+    options.menu_driven_program()
     option = options.ValidOption()
 
 # Exit the loop, meaning option == 4:
 if message != '':
     print(f'Your message is: \'{message}\'.')
 print('\nGoodbye')
-

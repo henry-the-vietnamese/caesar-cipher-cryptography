@@ -5,7 +5,7 @@
 # Author:       Tan Duc Mai
 # Email:        tan.duc.work@gmail.com
 # Date:         10/10/2021
-# Description:  Create functions to perform actions based on the user option.
+# Description:  Create functions to display the menu driven program, validate user option, and perform actions based on the user option.
 #   I hereby declare that I completed this work without any improper help
 #   from a third party and without using any aids other than those cited.
 
@@ -15,6 +15,20 @@ The random module helps randomise the offset value, hence unpredictable encrypti
 """
 
 import random
+
+
+def menu_driven_program():
+    print(
+    """
+-------------------
+     MAIN MENU
+-------------------
+1. Enter Message
+2. Encrypt Message
+3. Decrypt Message
+4. Quit
+"""
+    )
 
 
 def ValidOption():
