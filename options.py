@@ -23,6 +23,7 @@ def option_2(OFFSET, message):
         encrypted_message = ''
         for i in message:
             encrypted_message += chr(ord(i) + OFFSET)
+        encrypted_message += chr(OFFSET)
         print('Your message was successfully encrypted.')
         print(f'Your message is: \'{encrypted_message}\'')
         return encrypted_message
