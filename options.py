@@ -12,5 +12,17 @@
 
 def option_1(message):
     message = input('Please enter a new message: ')
-    print(f'Your message is: \'{message}.\'')
+    print(f'Your message is: \'{message}\'')
     return message
+
+def option_2(OFFSET, message):
+    if message == '':
+        print('Error: Cannot encrypt an empty message.')
+        return None
+    else:
+        encrypted_message = ''
+        for i in message:
+            encrypted_message += chr(ord(i) + OFFSET)
+        print('Your message was successfully encrypted.')
+        print(f'Your message is: \'{encrypted_message}\'')
+        return encrypted_message
