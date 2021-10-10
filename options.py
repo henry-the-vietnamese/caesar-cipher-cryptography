@@ -22,7 +22,10 @@ def option_2(OFFSET, message):
     else:
         encrypted_message = ''
         for i in message:
-            encrypted_message += chr(ord(i) + OFFSET)
+            UNICODE_VALUE = ord(i) + OFFSET
+            while UNICODE_VALUE > 126:
+                UNICODE_VALUE -= 95
+            encrypted_message += chr(UNICODE_VALUE)
         encrypted_message += chr(OFFSET)
         print('Your message was successfully encrypted.')
         print(f'Your message is: \'{encrypted_message}\'')
