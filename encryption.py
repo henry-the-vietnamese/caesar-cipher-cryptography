@@ -42,7 +42,7 @@ while option != 4:
     elif option == 2:
         message = options.option_2(OFFSET, message)
     else:
-        print('Option 3: Decrypt Message')
+        message = options.option_3(OFFSET, message)
     print(menu_driven_program)
     option = int(input('Enter an option (1,2,3,4): '))
 
