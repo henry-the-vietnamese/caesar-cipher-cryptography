@@ -38,7 +38,7 @@ def ValidOption():
 def option_1(message):
     """
     Function to prompt for and display the user message to the screen.
-    This function takes one parameters which is the empty message variable created initially.
+    This function takes one parameter which is the empty message variable created initially.
     Parameters: message.
     Returns: the message that the user inputted is returned from the function.
     """
@@ -50,6 +50,13 @@ def option_1(message):
 
 
 def option_2(message):
+    """
+    Function to encrypt the message inputted by the user (no encryption happens if the message is empty).
+    This function takes one parameter which is the message inputted previously in command 1.
+    Parameters: message.
+    Returns: the message that has been successfully encrypted is returned from the function.
+    """
+
     if message == '':
         print('Error: Cannot encrypt an empty message.')
         return ''
@@ -68,6 +75,13 @@ def option_2(message):
 
 
 def option_3(encrypted_message):
+    """
+    Function to decrypt the the message that has been encrypted (no encryption happens if the message is empty).
+    This function takes one parameter which is the message inputted previously in command 1 and then encrypted using command 2.
+    Parameters: encrypted_message.
+    Returns: the message that has been successfully decrypted is returned from the function.
+    """
+
     if encrypted_message == '':
         print('Error: Cannot decrypt an empty message.')
         return ''
