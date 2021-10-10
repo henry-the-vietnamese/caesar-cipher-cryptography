@@ -10,6 +10,10 @@
 #   from a third party and without using any aids other than those cited.
 
 
+"""
+The predefined options module consists of three functions that take place as soon as the user inputs an option.
+"""
+
 import options
 
 
