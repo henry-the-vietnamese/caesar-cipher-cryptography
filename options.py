@@ -19,7 +19,7 @@ import random
 
 def option_1(message):
     message = input('Please enter a new message: ')
-    print(f'Your message is: \'{message}\'')
+    print(f'Your message is: \'{message}\'.')
     return message
 
 
