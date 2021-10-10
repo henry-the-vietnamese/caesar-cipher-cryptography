@@ -10,6 +10,7 @@
 #   from a third party and without using any aids other than those cited.
 
 
+import random
 import options
 
 
@@ -35,7 +36,7 @@ while option not in range(1, 5):
 
 # Now we have a valid option.
 while option != 4:
-    OFFSET = 1
+    OFFSET = random.randint(32, 126)
     if option == 1:
         message = options.option_1(message)
     elif option == 2:
