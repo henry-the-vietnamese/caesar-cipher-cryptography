@@ -51,5 +51,7 @@ while option != 4:
         option = int(input('Invalid choice. Enter an option (1,2,3,4): '))
 
 # Exit the loop, meaning option == 4:
+if message != '':
+    print(f'Your message is: \'{message}\'.')
 print('\nGoodbye')
 
