@@ -36,6 +36,13 @@ def ValidOption():
 
 
 def option_1(message):
+    """
+    Function to prompt for and display the user message to the screen.
+    This function takes one parameters which is the empty message variable created initially.
+    Parameters: message.
+    Returns: the message that the user inputted is returned from the function.
+    """
+
     message = input('Please enter a new message: ')
     print(f'Your message is: \'{message}\'.')
     return message
