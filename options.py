@@ -18,6 +18,12 @@ import random
 
 
 def ValidOption():
+    """
+    Function to validate the user choice. Creating this function allows the validation (using try/except/finally) to continuously repeats until a valid option is made.
+    This function tales no parameters, as well as no global variables.
+    Returns: the finally valid guess is returned.
+    """
+
     try:
         option = int(input('Enter an option (1,2,3,4): '))
     except ValueError:
