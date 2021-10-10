@@ -17,6 +17,18 @@ The random module helps randomise the offset value, hence unpredictable encrypti
 import random
 
 
+def ValidateOption():
+    try:
+        option = int(input('Enter an option (1,2,3,4): '))
+    except ValueError:
+        print('Invalid choice. It should be an integer data type.')
+        option = ValidateOption()
+    finally:
+        while option not in range(1, 5):
+            option = int(input('Invalid choice. Enter an option (1,2,3,4): '))
+        return option
+
+
 def option_1(message):
     message = input('Please enter a new message: ')
     print(f'Your message is: \'{message}\'.')

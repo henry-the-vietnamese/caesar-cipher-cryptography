@@ -31,11 +31,9 @@ menu_driven_program = (
 
 print(menu_driven_program)
 message = ''
-option = int(input('Enter an option (1,2,3,4): '))
 
-# Input Validation.
-while option not in range(1, 5):
-    option = int(input('Invalid choice. Enter an option (1,2,3,4): '))
+# Input Validation
+option = options.ValidateOption()
 
 # Now we have a valid option.
 while option != 4:
@@ -46,9 +44,7 @@ while option != 4:
     else:
         message = options.option_3(message)
     print(menu_driven_program)
-    option = int(input('Enter an option (1,2,3,4): '))
-    while option not in range(1, 5):
-        option = int(input('Invalid choice. Enter an option (1,2,3,4): '))
+    option = options.ValidateOption()
 
 # Exit the loop, meaning option == 4:
 if message != '':
