@@ -5,18 +5,23 @@
 # Author:       Tan Duc Mai
 # Email:        tan.duc.work@gmail.com
 # Date:         10/10/2021
-# Description:  Create functions to display the menu driven program, validate user option, and perform actions based on the user option.
+# Description:  Create functions to display the menu driven program, validate
+#               user option, and perform actions based on the user option.
 #   I hereby declare that I completed this work without any improper help
 #   from a third party and without using any aids other than those cited.
 
 
 """
-The random module helps randomise the offset value, hence unpredictable encryption.
+The random module helps randomise the offset value, hence unpredictable
+encryption.
 """
 
+
+# ------------------------------- Module Import -------------------------------
 import random
 
 
+# ---------------------------- Function Definitions ---------------------------
 def menu_driven_program():
     print(
     """
@@ -33,7 +38,9 @@ def menu_driven_program():
 
 def ValidOption():
     """
-    Function to validate the user choice. Creating this function allows the validation (using try/except/finally) to continuously repeats until a valid option is made.
+    Function to validate the user choice. Creating this function allows the
+    validation (using try/except/finally) to continuously repeats until a valid
+    option is made.
     This function tales no parameters, as well as no global variables.
     Returns: the finally valid guess is returned.
     """
@@ -52,7 +59,8 @@ def ValidOption():
 def option_1(message):
     """
     Function to prompt for and display the user message to the screen.
-    This function takes one parameter which is the empty message variable created initially.
+    This function takes one parameter which is the empty message variable
+    created initially.
     Parameters: message.
     Returns: the message that the user inputted is returned from the function.
     """
@@ -65,10 +73,13 @@ def option_1(message):
 
 def option_2(message):
     """
-    Function to encrypt the message inputted by the user (no encryption happens if the message is empty).
-    This function takes one parameter which is the message inputted previously in command 1.
+    Function to encrypt the message inputted by the user (no encryption happens
+    if the message is empty).
+    This function takes one parameter which is the message inputted previously
+    in command 1.
     Parameters: message.
-    Returns: the message that has been successfully encrypted is returned from the function.
+    Returns: the message that has been successfully encrypted is returned from
+    the function.
     """
 
     if message == '':
@@ -90,10 +101,13 @@ def option_2(message):
 
 def option_3(encrypted_message):
     """
-    Function to decrypt the the message that has been encrypted (no encryption happens if the message is empty).
-    This function takes one parameter which is the message inputted previously in command 1 and then encrypted using command 2.
+    Function to decrypt the the message that has been encrypted (no encryption
+    happens if the message is empty).
+    This function takes one parameter which is the message inputted previously
+    in command 1 and then encrypted using command 2.
     Parameters: encrypted_message.
-    Returns: the message that has been successfully decrypted is returned from the function.
+    Returns: the message that has been successfully decrypted is returned from
+    the function.
     """
 
     if encrypted_message == '':
