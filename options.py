@@ -35,14 +35,13 @@ def menu_driven_program():
 
 
 def ValidOption():
-    """
+   """
     Function to validate the user choice. Creating this function allows the
     validation (using try/except/finally) to continuously repeats until a valid
     option is made.
     This function tales no parameters, as well as no global variables.
     Returns: the finally valid guess is returned.
     """
-
     try:
         option = int(input('Enter an option (1,2,3,4): '))
     except ValueError:
@@ -62,7 +61,6 @@ def option_1(message):
     Parameters: message.
     Returns: the message that the user inputted is returned from the function.
     """
-
     message = input('Please enter a new message: ')
     if message != '':
         print(f'Your message is: \'{message}\'.')
@@ -79,7 +77,6 @@ def option_2(message):
     Returns: the message that has been successfully encrypted is returned from
     the function.
     """
-
     if message == '':
         print('Error: Cannot encrypt an empty message.')
         return ''
@@ -107,7 +104,6 @@ def option_3(encrypted_message):
     Returns: the message that has been successfully decrypted is returned from
     the function.
     """
-
     if encrypted_message == '':
         print('Error: Cannot decrypt an empty message.')
         return ''
