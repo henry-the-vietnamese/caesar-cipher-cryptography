@@ -4,20 +4,18 @@
 # File:         options.py
 # Author:       Tan Duc Mai
 # Email:        tan.duc.work@gmail.com
-# Date:         10/10/2021
+# Date:         10-Oct-2021
 # Description:  Create functions to display the menu driven program, validate
 #               user option, and perform actions based on the user option.
 #   I hereby declare that I completed this work without any improper help
 #   from a third party and without using any aids other than those cited.
 
 
+# ------------------------------- Module Import -------------------------------
 """
 The random module helps randomise the offset value, hence unpredictable
 encryption.
 """
-
-
-# ------------------------------- Module Import -------------------------------
 import random
 
 
