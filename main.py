@@ -16,19 +16,22 @@
 The predefined options module consists of three functions that take place as
 soon as the user inputs an option - which is also evaluated using another
 function.
-Another function in the options module is the one that displays the
-menu driven program, which is helpful since the menu is repeatedly used in the
-main program.
+Another function in the options module is the one that displays the menu driven
+program, which is helpful since the menu is repeatedly used in the main
+program.
 """
 import options
 
 
 # ---------------------------------- Program ----------------------------------
 if __name__ == '__main__':
+    # Display the menu.
     options.menu_driven_program()
+
+    # Initialise an empty message variable.
     message = ''
 
-    # Input Validation
+    # Validate option chosen by user.
     option = options.validate_option()
 
     # Now we have a valid option.
@@ -39,10 +42,12 @@ if __name__ == '__main__':
             message = options.option_2(message)
         else:
             message = options.option_3(message)
+        # Display the menu again.
         options.menu_driven_program()
+        # Validate option chosen by user.
         option = options.validate_option()
 
-    #Exit the loop, meaning option == 4:
+    # Exit the loop, meaning option == 4:
     if message != '':
         print(f'Your message is: \'{message}\'.')
     print('\nGoodbye')
