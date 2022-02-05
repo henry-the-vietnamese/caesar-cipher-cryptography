@@ -29,7 +29,7 @@ if __name__ == '__main__':
     message = ''
 
     # Input Validation
-    option = options.ValidOption()
+    option = options.validate_option()
 
     # Now we have a valid option.
     while option != 4:
@@ -40,7 +40,7 @@ if __name__ == '__main__':
         else:
             message = options.option_3(message)
         options.menu_driven_program()
-        option = options.ValidOption()
+        option = options.validate_option()
 
     #Exit the loop, meaning option == 4:
     if message != '':

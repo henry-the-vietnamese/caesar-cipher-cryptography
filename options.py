@@ -34,8 +34,8 @@ def menu_driven_program():
     )
 
 
-def ValidOption():
-   """
+def validate_option():
+    """
     Function to validate the user choice. Creating this function allows the
     validation (using try/except/finally) to continuously repeats until a valid
     option is made.
@@ -46,7 +46,7 @@ def ValidOption():
         option = int(input('Enter an option (1,2,3,4): '))
     except ValueError:
         print('Invalid choice. It should be an integer data type.')
-        option = ValidOption()
+        option = validate_option()
     finally:
         while option not in range(1, 5):
             option = int(input('Invalid choice. Enter an option (1,2,3,4): '))
