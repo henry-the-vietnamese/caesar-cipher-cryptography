@@ -22,15 +22,14 @@ import random
 # ---------------------------- Function Definitions ---------------------------
 def menu_driven_program():
     print(
-    """
--------------------
-     MAIN MENU
--------------------
-1. Enter Message
-2. Encrypt Message
-3. Decrypt Message
-4. Quit
-"""
+        '-------------------',
+        '     MAIN MENU',
+        '-------------------',
+        '1. Enter Message',
+        '2. Encrypt Message',
+        '3. Decrypt Message',
+        '4. Quit',
+        sep='\n',
     )
 
 
