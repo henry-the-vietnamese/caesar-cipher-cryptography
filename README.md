@@ -1,10 +1,21 @@
-# Caesar Cipher Cryptography
+# Aim
 Use Caesar Cipher technique to encrypt or decrypt an inputted message.
+
+# Introduction
+A simple way to encrypt data is attributed to [Julius
+Caesar](http://en.wikipedia.org/wiki/Caesar_cipher), the Roman Emperor. This
+method takes each character in a message and replaces it with one which is a
+certain distance (offset) along the alphabet from it.
+
+For example:
+
+
+
 
 # Sample Output
 ```
 -------------------
- MAIN MENU 
+     MAIN MENU
 -------------------
 1. Enter Message
 2. Encrypt Message
@@ -16,7 +27,7 @@ Please enter a new message: The rabbit has sprung.
 Your message is: 'The rabbit has sprung.'.
 
 -------------------
- MAIN MENU 
+     MAIN MENU
 -------------------
 1. Enter Message
 2. Encrypt Message
@@ -28,7 +39,7 @@ Your message was successfully encrypted.
 Your message is: '`tq,~mnnu!,tm , |~"zs:k'.
 
 -------------------
- MAIN MENU 
+     MAIN MENU
 -------------------
 1. Enter Message
 2. Encrypt Message
@@ -40,7 +51,7 @@ Please enter a new message: The conference will commence.
 Your message is: 'The conference will commence.'.
 
 -------------------
- MAIN MENU 
+     MAIN MENU
 -------------------
 1. Enter Message
 2. Encrypt Message
@@ -52,7 +63,7 @@ Your message was successfully decrypted.
 Your message is: '&:7Q5A@87D7@57QI;>>Q5A??7@57'.
 
 -------------------
- MAIN MENU 
+     MAIN MENU
 -------------------
 1. Enter Message
 2. Encrypt Message
@@ -64,7 +75,7 @@ Your message was successfully encrypted.
 Your message is: 'BVSmQ]\TS`S\QSmeWZZmQ][[S\QS{'.
 
 -------------------
- MAIN MENU 
+     MAIN MENU
 -------------------
 1. Enter Message
 2. Encrypt Message
