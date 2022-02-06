@@ -8,8 +8,7 @@ method takes each character in a message and replaces it with one which is a
 certain distance (offset) along the alphabet from it.
 
 For example:
-
-
+![Exaxmple of the technique](example.png)
 
 
 # Sample Output
