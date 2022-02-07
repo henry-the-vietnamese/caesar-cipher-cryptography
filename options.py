@@ -35,33 +35,33 @@ def menu_driven_program():
 
 
 def validate_option():
-    """
-    Function to validate the user choice. Creating this function allows the
-    validation (using try/except/finally) to continuously repeats until a valid
-    option is made.
-    This function tales no parameters, as well as no global variables.
-    Returns: the finally valid guess is returned.
+    """Prompt the user for a number and validate it.
+
+    Returns
+    -------
+    int
+        The valid guess taken from the user.
     """
     option = None
 
     while option is None or option not in range(1, 5):
         try:
-            option = int(input('Enter an option (1,2,3,4): '))
+            option = float(input('Enter an option (1,2,3,4): '))
             if option not in range(1, 5):
-                print('Invalid choice. Enter an option between 1 and 4.')
+                print('Invalid choice: option should be between 1 and 4.')
         except ValueError as e:
-            print('Invalid choice. It should be an integer data type.')
+            print(f'Invalid choice: {e}.')
 
-    return option
+    return int(option)
 
 
-def option_1(message):
-    """
-    Function to prompt for and display the user message to the screen.
-    This function takes one parameter which is the empty message variable
-    created initially.
-    Parameters: message.
-    Returns: the message that the user inputted is returned from the function.
+def option_1():
+    """Prompt for and display the user message to the screen.
+
+    Returns
+    -------
+    str
+        The message received from the user.
     """
     message = input('Please enter a new message: ')
     if message != '':
@@ -72,14 +72,17 @@ def option_1(message):
 
 
 def option_2(message):
-    """
-    Function to encrypt the message inputted by the user (no encryption happens
-    if the message is empty).
-    This function takes one parameter which is the message inputted previously
-    in command 1.
-    Parameters: message.
-    Returns: the message that has been successfully encrypted is returned from
-    the function.
+    """Encrypt the user message (no encryption if message is empty)
+
+    Parameters
+    ----------
+    str
+        Original message received from the user, could be empty if the user
+        chooses this option before the first one.
+    Returns
+    -------
+    str
+        The message that has been successfully encrypted.
     """
     if message == '':
         print('Error: Cannot encrypt an empty message.', end='\n\n')
@@ -99,14 +102,17 @@ def option_2(message):
 
 
 def option_3(encrypted_message):
-    """
-    Function to decrypt the the message that has been encrypted (no encryption
-    happens if the message is empty).
-    This function takes one parameter which is the message inputted previously
-    in command 1 and then encrypted using command 2.
-    Parameters: encrypted_message.
-    Returns: the message that has been successfully decrypted is returned from
-    the function.
+    """Decrypt the user message (no decryption if message is empty)
+
+    Parameters
+    ----------
+    str
+        The message that has been encrypted, could be empty if the user chooses
+        this option before the first one.
+    Returns
+    -------
+    str
+        The message that has been successfully decrypted.
     """
     if encrypted_message == '':
         print('Error: Cannot decrypt an empty message.', end='\n\n')
