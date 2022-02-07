@@ -8,7 +8,7 @@ method takes each character in a message and replaces it with one which is a
 certain distance (offset) along the alphabet from it.
 
 For example:
-![Exaxmple of the technique](example.png)
+![Exaxmple of the technique](assets/example.png)
 
 If the offset is 3 then A becomes D, B becomes E, C becomes F etc.
 
@@ -26,14 +26,14 @@ all the printable ASCII characters. That is, all the characters from ASCII 32
 
    If *c* is a string of length 1, *ord(c)* returns an integer representing the
    ASCII value of the string.
-  
+
    For example: *ord(*'*a*'*)* returns the integer *97*.
 
 2. **chr(i)**
 
    If *i* is an integer, *chr(i)* returns a string containing only one character
-   with an ASCII code is equal to the integer *i*. 
-   
+   with an ASCII code is equal to the integer *i*.
+
    For example: *chr(97)* returns the string '*a*'
 
 # Module *options.py*
@@ -65,6 +65,44 @@ The following commands should be allowed:
 4. **Quit**:
 
    Displays a goodbye message to the screen and quits the program.
+
+# Encryption Process
+To start with, choose 1 as the offset. In this case, if the message 'abG' is
+enterered, after the encryption, the result should be 'bcH'. Now that it is
+working, use the *randint()* function from the *random* module to make the
+offset a random number between 32 and 126.
+
+![Printable ASCII character set](assets/printable-ascii.png)
+
+The program only work with the printable ASCII character set. That is, all the
+characters from ASCII 32 (Space) to ASCII 126 (~). When the ASCII value of the
+encrypted character points to a character beyond 126 it should *wrap* around to
+the beginning of the set.
+
+For example, if the offset is 4 and the character is '}' (ASCII 125) then it
+will encrypt to ASCII 129. This is beyond 126 so you should subtract the total
+number of characters in the set (95) to wrap back to the beginning. The
+resulting encrypted character will be the double-quote character " (129-95,
+ASCII 34). You may have to subtract 95 multiple times until it is within the
+set, for example, '}' + '}' is 250, and minus 95 is 155. This is still out of
+bounds. Use a loop. Note that if the encrypted string contains characters that
+are not in the table above, then your ASCII values are not 'wrapping' correctly.
+
+# Decryption Process
+The encryption key will be found as the last character in the string.  Subtract
+this offset from the ASCII value of each other character in the message
+variable. These ASCII values will then need to be converted back to characters
+using the chr(i) function.
+
+Again, the program only work with the printable ASCII character set. That is,
+all the characters from ASCII 32 (Space) to ASCII 126 (~). When the offset
+points to a character less than 32 it should *wrap* around to the end of the
+set.
+
+For example, if the offset is 4 and the character is '!' (ASCII 33) then it will
+decrypt to ASCII 29. This is less than 32 so wrap back to the end by adding the
+total number of characters (95). This gives character '|' (29+95, ASCII 124).
+You may have to add 95 multiple times until it is within the set. Use a loop.
 
 # Sample Output
 ```
