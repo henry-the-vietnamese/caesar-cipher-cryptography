@@ -20,18 +20,21 @@ Instead of restricting the cipher to the alphabetic characters only, we will use
 all the printable ASCII characters. That is, all the characters from ASCII 32
 (Space) to ASCII 126 (~).
 
-# Mainly used functions -
+# Mainly used functions
 1. **ord(c)**
 
-  If *c* is a string of length 1, *ord(c)* returns an integer representing the
-  ASCII value of the string. For example: *ord(*'*a*'*)* returns the integer
-  *97*.
+
+   If *c* is a string of length 1, *ord(c)* returns an integer representing the
+   ASCII value of the string.
+  
+   For example: *ord(*'*a*'*)* returns the integer *97*.
 
 2. **chr(i)**
 
    If *i* is an integer, *chr(i)* returns a string containing only one character
-   with an ASCII code is equal to the integer *i*.  For example: *chr(97)*
-   returns the string '*a*'
+   with an ASCII code is equal to the integer *i*. 
+   
+   For example: *chr(97)* returns the string '*a*'
 
 # Module *options.py*
 Includes many functions that collectively simulate a menu driven program that
