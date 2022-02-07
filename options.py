@@ -85,14 +85,14 @@ def option_2(message):
         print('Error: Cannot encrypt an empty message.', end='\n\n')
         return ''
     else:
-        OFFSET = random.randint(32, 126)
+        offset = random.randint(32, 126)
         encrypted_message = ''
         for i in message:
-            UNICODE_VALUE = ord(i) + OFFSET
-            while UNICODE_VALUE > 126:
-                UNICODE_VALUE -= 95
-            encrypted_message += chr(UNICODE_VALUE)
-        encrypted_message += chr(OFFSET)
+            unicode_value = ord(i) + offset
+            while unicode_value > 126:
+                unicode_value -= 95
+            encrypted_message += chr(unicode_value)
+        encrypted_message += chr(offset)
         print('Your message was successfully encrypted.')
         print(f'Your message is: \'{encrypted_message}\'.', end='\n\n')
         return encrypted_message
@@ -112,13 +112,13 @@ def option_3(encrypted_message):
         print('Error: Cannot decrypt an empty message.', end='\n\n')
         return ''
     else:
-        OFFSET = ord(encrypted_message[-1])
+        offset = ord(encrypted_message[-1])
         decrypted_message = ''
         for i in encrypted_message:
-            UNICODE_VALUE = ord(i) - OFFSET
-            while UNICODE_VALUE < 32:
-                UNICODE_VALUE += 95
-            decrypted_message += chr(UNICODE_VALUE)
+            unicode_value = ord(i) - offset
+            while unicode_value < 32:
+                unicode_value += 95
+            decrypted_message += chr(unicode_value)
         print('Your message was successfully decrypted.')
         print(f'Your message is: \'{decrypted_message[:-1]}\'.', end='\n\n')
         return decrypted_message[:-1]
