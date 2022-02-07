@@ -42,15 +42,17 @@ def validate_option():
     This function tales no parameters, as well as no global variables.
     Returns: the finally valid guess is returned.
     """
-    try:
-        option = int(input('Enter an option (1,2,3,4): '))
-    except ValueError:
-        print('Invalid choice. It should be an integer data type.')
-        option = validate_option()
-    finally:
-        while option not in range(1, 5):
-            option = int(input('Invalid choice. Enter an option (1,2,3,4): '))
-        return option
+    option = None
+
+    while option is None or option not in range(1, 5):
+        try:
+            option = int(input('Enter an option (1,2,3,4): '))
+            if option not in range(1, 5):
+                print('Invalid choice. Enter an option between 1 and 4.')
+        except ValueError as e:
+            print('Invalid choice. It should be an integer data type.')
+
+    return option
 
 
 def option_1(message):
