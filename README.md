@@ -10,6 +10,44 @@ certain distance (offset) along the alphabet from it.
 For example:
 ![Exaxmple of the technique](example.png)
 
+If the offset is 3 then A becomes D, B becomes E, C becomes F etc.
+
+Encrypting DIG with the offset of +3 will result in GLJ. The decrypt GLJ, simply
+offset by the same amount in the opposite direction (i.e. with the negative
+offset -3).
+
+Instead of restricting the cipher to the alphabetic characters only, we will use
+all the printable ASCII characters. That is, all the characters from ASCII 32
+(Space) to ASCII 126 (~).
+
+# Mainly used functions -
+1. **ord(c)**
+If *c* is a string of length 1, *ord(c)* returns an integer representing the ASCII
+value of the string. For example: *ord(*'*a*'*)* returns the integer *97*.
+2. **chr(i)**
+If *i* is an integer, *chr(i)* returns a string containing only one character with
+an ASCII code is equal to the integer *i*.  For example: *chr(97)* returns the
+string '*a*'
+
+# Module *options.py*
+Includes many functions that collectively simulate a menu driven program that
+will allow the user to enter commands and process these commands until the quit
+command is entered.
+
+The following commands should be allowed:
+1. **Enter Message**: Prompt for and read (from the keyboard) a string to be
+   encrypted.
+2. **Encrypt Message**: Encrypts the previously entered message or displays an
+   error message if no string was entered. The message will be encrypted using a
+   randomly generated number between 32 and 126 as the offset/encryption key.
+   This encryption key will be converted into a character using *chr(i)* and
+   appended to the encrypted string.
+3. **Decrypt Message**: Decrypts the previously entered message or displays an
+   error message if no string was entered. The message will be decrypted by
+   converting the last letter in the string (the encryption key) to its ASCII
+   value, and using this to offset all other characters in the negative
+   direction. The encryption key should then be removed from the message.
+4. **Quit:** Displays a goodbye message to the screen and quits the program.
 
 # Sample Output
 ```
