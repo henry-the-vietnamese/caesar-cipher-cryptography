@@ -37,7 +37,7 @@ if __name__ == '__main__':
     # Now we have a valid option.
     while option != 4:
         if option == 1:
-            message = options.option_1(message)
+            message = options.option_1()
         elif option == 2:
             message = options.option_2(message)
         else:
