@@ -1,15 +1,17 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
+# =============================================================================
 #
-# File:         main.py
-# Author:       Tan Duc Mai
-# Email:        tan.duc.work@gmail.com
-# Date:         10-Oct-2021
-# Description:  Use Caesar Cipher technique to encrypt or decrypt an
-#               inputted message.
+#        FILE: main.py
+#      AUTHOR: Tan Duc Mai
+#       EMAIL: tan.duc.work@gmail.com
+#        DATE: 10-Oct-2021
+# DESCRIPTION: Use Caesar Cipher technique to encrypt or decrypt an
+#              inputted message.
 #   I hereby declare that I completed this work without any improper help
 #   from a third party and without using any aids other than those cited.
-
+# =============================================================================
 
 # ------------------------------- Module Import -------------------------------
 """
@@ -49,5 +51,5 @@ if __name__ == '__main__':
 
     # Exit the loop, meaning option == 4:
     if message != '':
-        print(f'Your message is: \'{message}\'.')
+        print(f'Your message is: {repr(message)}.')
     print('\nGoodbye')
