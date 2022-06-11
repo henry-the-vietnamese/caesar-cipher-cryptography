@@ -13,7 +13,7 @@
 #   from a third party and without using any aids other than those cited.
 # =============================================================================
 
-# ------------------------------- Module Import -------------------------------
+# ------------------------------- Module Imports ------------------------------
 # To randomise the offset value, hence unpredictable encryption.
 import random
 
