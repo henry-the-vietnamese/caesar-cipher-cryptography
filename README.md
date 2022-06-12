@@ -3,7 +3,7 @@
 1. [Aim](#aim)
 1. [Introduction](#introduction)
 1. [Mainly Used Functions](#mainly-used-functions)
-1. [Module *options*](#module-options)
+1. [Options](#options)
 1. [Encryption Process](#encryption-process)
 1. [Decryption Process](#decryption-process)
 1. [Sample Output](https://github.com/tanducmai/caesar-cipher-cryptography/blob/main/sample_output.pdf)
@@ -49,7 +49,7 @@ all the printable ASCII characters. That is, all the characters from ASCII 32
 
    For example: *chr(97)* returns the string '*a*'
 
-# Module options
+# Options
 
 Includes many functions that collectively simulate a menu driven program that
 will allow the user to enter commands and process these commands until the quit
