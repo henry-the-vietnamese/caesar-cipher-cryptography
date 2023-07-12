@@ -1,12 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 # Table of Contents
 
-1. [Aim](#aim)
-1. [Introduction](#introduction)
-1. [Mainly Used Functions](#mainly-used-functions)
-1. [Options](#options)
-1. [Encryption Process](#encryption-process)
-1. [Decryption Process](#decryption-process)
-1. [Sample Output](https://github.com/tanducmai/caesar-cipher-cryptography/blob/main/sample_output.pdf)
+- [Table of Contents](#table-of-contents)
+- [Aim](#aim)
+- [Introduction](#introduction)
+- [Mainly used functions](#mainly-used-functions)
+- [Options](#options)
+- [Encryption Process](#encryption-process)
+- [Decryption Process](#decryption-process)
+- [Sample Output](#sample-output)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # Aim
 
