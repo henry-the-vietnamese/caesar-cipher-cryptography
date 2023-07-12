@@ -20,7 +20,7 @@ method takes each character in a message and replaces it with one which is a
 certain distance (offset) along the alphabet from it.
 
 For example:
-![Exaxmple of the technique](assets/example.png)
+![Example of the technique](assets/example.png)
 
 If the offset is 3 then A becomes D, B becomes E, C becomes F etc.
 
@@ -83,7 +83,7 @@ The following commands should be allowed:
 # Encryption Process
 
 To start with, choose 1 as the offset. In this case, if the message 'abG' is
-enterered, after the encryption, the result should be 'bcH'. Now that it is
+entered, after the encryption, the result should be 'bcH'. Now that it is
 working, use the *randint()* function from the *random* module to make the
 offset a random number between 32 and 126.
 
